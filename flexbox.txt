@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Flexbox</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <a href="#">Início</a>
+            <a href="#">Sobre</a>
+            <a href="#">Serviços</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Bem-vindo ao Nosso Site</h1>
+        <p>Este é um exemplo de como o Flexbox pode ser usado para criar um menu de navegação flexível.</p>
+    </main>
+</body>
+</html>
+```
+
+**CSS (`estilo.css`):**
+
+```css
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 10px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+```
