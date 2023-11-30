@@ -1,0 +1,53 @@
+
+1. Crie uma nova pasta dentro do diretório `src` do seu projeto React. Vamos chamá-la de `utils` (ou outro nome de sua escolha).
+
+2. Dentro dessa nova pasta, crie um arquivo JavaScript chamado, por exemplo, `mensagem.js`.
+
+3. Abra o arquivo `mensagem.js` e adicione o seguinte código de exemplo:
+
+```javascript
+// mensagem.js
+
+// Função que retorna uma mensagem
+export default function obterMensagem() {
+  return "Olá! Esta é a mensagem do seu arquivo mensagem.js.";
+}
+```
+
+4. Salve o arquivo.
+
+5. Agora, abra o arquivo `src/App.js` no seu projeto React.
+
+6. Importe e use a função no componente `App`. Substitua o conteúdo de `src/App.js` pelo seguinte:
+
+```jsx
+// src/App.js
+import React from 'react';
+import './App.css';
+import obterMensagem from './utils/mensagem';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <p>
+          Bem-vindo ao meu aplicativo React! <br />
+          {obterMensagem()}
+        </p>
+      </header>
+    </div>
+  );
+}
+
+export default App;
+```
+
+Certifique-se de ajustar o caminho do `import` de acordo com a estrutura do seu projeto.
+
+7. Salve o arquivo `App.js`.
+
+8. Se o servidor de desenvolvimento ainda estiver em execução, ele detectará automaticamente as alterações e atualizará o navegador. Se não estiver em execução, execute `npm start` no terminal no diretório do seu projeto para iniciar o servidor.
+
+9. Abra o navegador e acesse http://localhost:3000/. Você verá a mensagem do seu arquivo `mensagem.js` sendo exibida junto com a mensagem de boas-vindas.
+
+Certifique-se de incluir os arquivos modificados na sua atividade.
