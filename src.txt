@@ -1,0 +1,49 @@
+
+1. Abra o arquivo `src/App.js` do seu projeto React.
+
+2. Importe o hook `useState` do React no início do arquivo:
+
+```jsx
+import React, { useState } from 'react';
+import './App.css';
+```
+
+3. Dentro da função `App`, use o hook `useState` para criar uma variável de estado chamada `contador` e uma função `setContador` para atualizar esse estado. Inicialize o estado com o valor `0`:
+
+```jsx
+function App() {
+  const [contador, setContador] = useState(0);
+  // ...
+}
+```
+
+4. Modifique o conteúdo do componente `App` para incluir o botão e exibir o valor do contador:
+
+```jsx
+function App() {
+  const [contador, setContador] = useState(0);
+
+  const incrementarContador = () => {
+    setContador(contador + 1);
+  };
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>Contador: {contador}</h1>
+        <button onClick={incrementarContador}>Incrementar</button>
+      </header>
+    </div>
+  );
+}
+```
+
+No código acima, adicionamos um botão que, quando clicado, chama a função `incrementarContador`, que utiliza `setContador` para atualizar o valor da variável de estado `contador`.
+
+5. Salve o arquivo.
+
+6. Se o servidor de desenvolvimento não estiver em execução, execute `npm start` no terminal no diretório do seu projeto para iniciar o servidor.
+
+7. Abra o navegador e acesse http://localhost:3000/. Você verá o componente `App` com o botão que incrementa o contador.
+
+Certifique-se de incluir as alterações feitas no arquivo `App.js` na sua atividade.
