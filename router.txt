@@ -1,0 +1,72 @@
+
+1. Abra o terminal no diretório do seu projeto e instale a biblioteca `react-router-dom`:
+
+```bash
+npm install react-router-dom
+```
+
+2. Abra o arquivo `src/App.js` do seu projeto React.
+
+3. Importe os componentes necessários do `react-router-dom`:
+
+```jsx
+import React from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import './App.css';
+```
+
+4. Crie componentes para as diferentes telas do seu aplicativo. Vamos criar dois exemplos simples: `Home` e `Sobre`:
+
+```jsx
+const Home = () => (
+  <div>
+    <h2>Home</h2>
+    <p>Bem-vindo à página inicial!</p>
+  </div>
+);
+
+const Sobre = () => (
+  <div>
+    <h2>Sobre</h2>
+    <p>Esta é a página sobre nós.</p>
+  </div>
+);
+```
+
+5. Modifique a função `App` para incluir o roteamento entre essas telas:
+
+```jsx
+function App() {
+  return (
+    <Router>
+      <div className="App">
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/sobre">Sobre</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <hr />
+
+        <Route path="/" exact component={Home} />
+        <Route path="/sobre" component={Sobre} />
+      </div>
+    </Router>
+  );
+}
+```
+
+Neste exemplo, criamos um menu de navegação com links para as páginas `Home` e `Sobre`. Usamos o componente `Route` para associar caminhos de URL aos componentes correspondentes.
+
+6. Salve o arquivo.
+
+7. Se o servidor de desenvolvimento não estiver em execução, execute `npm start` no terminal no diretório do seu projeto para iniciar o servidor.
+
+8. Abra o navegador e acesse http://localhost:3000/. Você verá o componente `App` com links para as páginas `Home` e `Sobre`.
+
+Certifique-se de incluir as alterações feitas no arquivo `App.js` na sua atividade.
