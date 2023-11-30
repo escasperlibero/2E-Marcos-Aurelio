@@ -1,0 +1,30 @@
+class AnimalEstimacao:
+    def __init__(self, nome, raca, idade, responsavel, telefone):
+        self.nome = nome
+        self.raca = raca
+        self.idade = idade
+        self.responsavel = responsavel
+        self.telefone = telefone
+
+def cadastrar_animal():
+    nome = input("Digite o nome do animal: ")
+    raca = input("Digite a raça do animal: ")
+    idade = int(input("Digite a idade do animal: "))
+    responsavel = input("Digite o nome do responsável: ")
+    telefone = input("Digite o telefone do responsável: ")
+
+    # Criando uma instância da classe AnimalEstimacao
+    animal = AnimalEstimacao(nome, raca, idade, responsavel, telefone)
+
+    return animal
+
+# Exemplo de uso
+animal_cadastrado = cadastrar_animal()
+
+# A partir daqui, você pode acessar os atributos do animal_cadastrado
+print("Cadastro do Animal:")
+print("Nome:", animal_cadastrado.nome)
+print("Raça:", animal_cadastrado.raca)
+print("Idade:", animal_cadastrado.idade)
+print("Responsável:", animal_cadastrado.responsavel)
+print("Telefone:", animal_cadastrado.telefone)
