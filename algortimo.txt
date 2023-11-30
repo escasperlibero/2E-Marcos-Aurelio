@@ -1,0 +1,34 @@
+function bubbleSort(arr) {
+  let n = arr.length;
+  let trocado;
+
+  do {
+    trocado = false;
+
+    for (let i = 0; i < n - 1; i++) {
+      // Comparar elementos adjacentes
+      if (arr[i] > arr[i + 1]) {
+        // Trocar elementos se estiverem fora de ordem
+        let temp = arr[i];
+        arr[i] = arr[i + 1];
+        arr[i + 1] = temp;
+
+        trocado = true;
+      }
+    }
+
+    // Após cada iteração, o maior elemento está no final, então reduzimos n
+    n--;
+  } while (trocado);
+
+  return arr;
+}
+
+// Vetor de entrada
+let vetor = [9, 5, 7, 2, 6, 1, 3, 0, 4, 8];
+
+// Chamar a função bubbleSort para ordenar o vetor
+let vetorOrdenado = bubbleSort(vetor);
+
+// Imprimir o vetor ordenado
+console.log("Vetor Ordenado:", vetorOrdenado);
