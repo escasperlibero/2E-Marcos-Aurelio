@@ -1,0 +1,72 @@
+
+1. **Árvore para Lista1:**
+   - Árvore original:
+     ```
+         45
+        /  \
+       20   60
+      / \     \
+     7  30     81
+       /       / \
+      8       97  100
+     /
+    4
+     ```
+   - Adicionando o valor 25:
+     ```
+         45
+        /  \
+       20   60
+      / \     \
+     7  30     81
+       / \    / \
+      8  25  97  100
+     /
+    4
+     ```
+   - Removendo o valor 30 (um nó com dois filhos):
+     ```
+         45
+        /  \
+       20   60
+      / \     \
+     7  25     81
+       /       / \
+      8      97  100
+     /
+    4
+     ```
+
+2. **Árvore para Lista2:**
+   - Árvore original:
+     ```
+         15
+        /  \
+       6    18
+      / \     \
+     3   7    20
+           \
+            16
+     ```
+   - Adicionando o valor 10:
+     ```
+         15
+        /  \
+       6    18
+      / \     \
+     3   7    20
+     / \
+    10  16
+     ```
+   - Removendo o valor 18 (um nó com dois filhos):
+     ```
+         15
+        /  \
+       6    20
+      / \      
+     3   7     
+     / \
+    10  16
+     ```
+
+Estes são exemplos simplificados de árvores binárias de busca. Cada árvore é construída de acordo com as propriedades de uma BST, e as operações de adição e remoção são realizadas mantendo essas propriedades.
