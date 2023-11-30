@@ -1,0 +1,54 @@
+
+1. No diretório `src` do seu projeto React, crie um novo arquivo chamado `MeuComponente.js`.
+
+2. Abra o arquivo `MeuComponente.js` e adicione o seguinte código:
+
+```jsx
+// MeuComponente.js
+
+import React from 'react';
+
+// Defina o componente funcional MeuComponente
+function MeuComponente(props) {
+  return (
+    <div>
+      <h1>Bem-vindo(a) ao Meu Componente!</h1>
+      <p>Olá, {props.nome}! Espero que você aproveite.</p>
+    </div>
+  );
+}
+
+export default MeuComponente;
+```
+
+3. Agora, abra o arquivo `src/App.js` e modifique-o para usar o novo componente `MeuComponente`:
+
+```jsx
+// App.js
+
+import React from 'react';
+import './App.css';
+import MeuComponente from './MeuComponente'; // Importe o componente MeuComponente
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <MeuComponente nome="Usuário" /> {/* Use MeuComponente e passe o nome como propriedade */}
+      </header>
+    </div>
+  );
+}
+
+export default App;
+```
+
+Certifique-se de ajustar o caminho do `import` de acordo com a estrutura do seu projeto.
+
+4. Salve ambos os arquivos.
+
+5. Se o servidor de desenvolvimento ainda estiver em execução, ele detectará automaticamente as alterações e atualizará o navegador. Se não estiver em execução, execute `npm start` no terminal no diretório do seu projeto para iniciar o servidor.
+
+6. Abra o navegador e acesse http://localhost:3000/. Você verá o componente `MeuComponente` exibindo uma mensagem de boas-vindas personalizada.
+
+Lembre-se de incluir os arquivos modificados na sua atividade.
